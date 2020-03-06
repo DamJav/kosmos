@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="/resources/style.css">
 </head>
 <body>
-kosmos
+<jsp:include page="header.jsp"/>
+
+<jsp:include page="footer.jsp"/>
 </body>
 </html>
