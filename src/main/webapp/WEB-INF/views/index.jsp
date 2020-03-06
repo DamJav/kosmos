@@ -13,7 +13,7 @@
 </head>
 <body>
 <jsp:include page="header.jsp"/>
-
+strona
 <jsp:include page="footer.jsp"/>
 </body>
 </html>
