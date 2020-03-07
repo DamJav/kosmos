@@ -14,6 +14,7 @@
 <body>
 <jsp:include page="header.jsp"/>
 strona
+<button><a href="/tourists">Turyści</a></button>
 <jsp:include page="footer.jsp"/>
 </body>
 </html>
