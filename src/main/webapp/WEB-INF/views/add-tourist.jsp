@@ -25,6 +25,8 @@
     Male
     <form:radiobutton value="Female" path="sex"/>
     Female<br/>
+    <form:label path="dateOfBirth">Date of birth</form:label>
+    <form:input type="date" path="dateOfBirth"/>
     <form:label path="notes">Notes</form:label>
     <form:textarea placeholder ="Notes" path="notes" ></form:textarea><br/>
     <button type="reset">Clear</button>
