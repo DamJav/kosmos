@@ -22,4 +22,9 @@ public class TouristController {
         model.addAttribute("tourists", touristService.findAllTourists());
         return "tourists";
     }
+
+    @GetMapping("/add")
+    public String addTourist(){
+        return "add-tourist";
+    }
 }
