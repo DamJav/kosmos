@@ -3,6 +3,7 @@ package damian.garbacz.kosmos.controllers;
 
 import damian.garbacz.kosmos.services.TouristService;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -16,9 +17,9 @@ public class TouristController {
         this.touristService = touristService;
     }
 
-
-    @GetMapping("")
-    public String showTourists(){
+    @GetMapping("/showAll")
+    public String showTourists(Model model){
+        model.addAttribute("tourists", touristService.findAllTourists());
         return "tourists";
     }
 }

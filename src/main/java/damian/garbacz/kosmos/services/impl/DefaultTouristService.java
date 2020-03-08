@@ -16,6 +16,6 @@ public class DefaultTouristService implements TouristService {
 
     @Override
     public List<Tourist> findAllTourists() {
-
+        return touristRepository.findAll();
     }
 }
