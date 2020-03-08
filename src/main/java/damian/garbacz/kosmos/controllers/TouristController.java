@@ -42,4 +42,10 @@ public class TouristController {
         touristService.deleteTourist(id);
         return "redirect:/tourists/showAll";
     }
+
+    @GetMapping("/edit")
+    public String editTourist(Long id, Model model){
+        model.addAttribute("touristFlights", touristService.findFlightsByTouristId(id));
+        return "tourist-flights";
+    }
 }
