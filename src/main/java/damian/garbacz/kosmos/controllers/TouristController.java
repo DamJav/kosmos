@@ -26,13 +26,14 @@ public class TouristController {
     }
 
     @GetMapping("/add")
-    public String addTourist(Model model){
+    public String addTouristForm(Model model){
         model.addAttribute("tourist", new Tourist());
         return "add-tourist";
     }
 
     @PostMapping("/add")
-    public String procesAddTourst(Tourist tourist){
-        
+    public String processAddTourist(Tourist tourist){
+        touristService.addTourist(tourist);
+        return "redirect:/tourists/showAll";
     }
 }

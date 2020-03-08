@@ -7,4 +7,5 @@ import java.util.List;
 public interface TouristService {
 
     List<Tourist> findAllTourists();
+    void addTourist(Tourist tourist);
 }

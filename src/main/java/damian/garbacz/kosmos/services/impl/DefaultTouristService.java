@@ -20,4 +20,9 @@ public class DefaultTouristService implements TouristService {
     public List<Tourist> findAllTourists() {
         return touristRepository.findAll();
     }
+
+    @Override
+    public void addTourist(Tourist tourist) {
+        touristRepository.save(tourist);
+    }
 }
