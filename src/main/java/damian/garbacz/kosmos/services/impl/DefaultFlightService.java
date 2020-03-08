@@ -21,4 +21,9 @@ public class DefaultFlightService implements FlightService {
     public List<Flight> findAllFlights() {
         return flightRepository.findAll();
     }
+
+    @Override
+    public void addFlight(Flight flight) {
+        flightRepository.save(flight);
+    }
 }

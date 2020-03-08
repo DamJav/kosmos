@@ -8,4 +8,5 @@ import java.util.List;
 public interface FlightService {
 
     List<Flight> findAllFlights();
+    void addFlight(Flight flight);
 }

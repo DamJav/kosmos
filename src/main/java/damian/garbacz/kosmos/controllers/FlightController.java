@@ -1,6 +1,7 @@
 package damian.garbacz.kosmos.controllers;
 
 
+import damian.garbacz.kosmos.entities.Flight;
 import damian.garbacz.kosmos.entities.Tourist;
 import damian.garbacz.kosmos.services.FlightService;
 import org.springframework.stereotype.Controller;
@@ -25,17 +26,17 @@ public class FlightController {
         return "flights";
     }
 
-//    @GetMapping("/add")
-//    public String addTouristForm(Model model){
-//        model.addAttribute("tourist", new Tourist());
-//        return "add-tourist";
-//    }
-//
-//    @PostMapping("/add")
-//    public String processAddTourist(Tourist tourist){
-//        touristService.addTourist(tourist);
-//        return "redirect:/tourists/showAll";
-//    }
+    @GetMapping("/add")
+    public String addFlightForm(Model model){
+        model.addAttribute("flight", new Flight());
+        return "add-flight";
+    }
+
+    @PostMapping("/add")
+    public String processAddFlight(Flight flight){
+        flightService.addFlight(flight);
+        return "redirect:/flights/showAll";
+    }
 //
 //    @GetMapping("/delete")
 //    public String deleteTourist(Long id){
