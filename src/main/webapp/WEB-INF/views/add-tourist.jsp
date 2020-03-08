@@ -1,4 +1,5 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
 <%--
   Created by IntelliJ IDEA.
   User: Damian
@@ -20,14 +21,12 @@
     <form:label path="country" >Surame</form:label>
     <form:input path="country" placeholder="Your Country"/><br/>
     <form:label path="sex" >Sex</form:label>
-    <form:radiobutton path="sex" itemValue="Male"/>
+    <form:radiobutton value="Male" path="sex"/>
     Male
-    <form:radiobutton path="sex" itemValue="Female"/>
+    <form:radiobutton value="Female" path="sex"/>
     Female<br/>
-    <form:label path="dateOfBirth">Date of birth</form:label>
-    <form:input path="dateOfBirth" placeholder="YYYY-MM-DD"/><br/>
     <form:label path="notes">Notes</form:label>
-    <form:textarea placeholder ="Notes" path="notes" required="true"></form:textarea><br/>
+    <form:textarea placeholder ="Notes" path="notes" ></form:textarea><br/>
     <button type="reset">Clear</button>
     <button type="submit">Submit</button>
 

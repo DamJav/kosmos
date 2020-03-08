@@ -15,7 +15,7 @@ import java.util.List;
 public class Tourist {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String surName;
@@ -25,4 +25,6 @@ public class Tourist {
     private LocalDate dateOfBirth;
     @ManyToMany
     private List<Flight> flights;
+
+
 }
