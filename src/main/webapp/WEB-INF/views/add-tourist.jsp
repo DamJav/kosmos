@@ -20,14 +20,17 @@
     <form:label path="country" >Surame</form:label>
     <form:input path="country" placeholder="Your Country"/><br/>
     <form:label path="sex" >Sex</form:label>
-    Male
     <form:radiobutton path="sex" itemValue="Male"/>
-    Female
-    <form:radiobutton path="sex" itemValue="Female"/><br/>
+    Male
+    <form:radiobutton path="sex" itemValue="Female"/>
+    Female<br/>
     <form:label path="dateOfBirth">Date of birth</form:label>
     <form:input path="dateOfBirth" placeholder="YYYY-MM-DD"/><br/>
     <form:label path="notes">Notes</form:label>
-    <form:textarea placeholder ="Notes" path="notes" required="true"></form:textarea>
+    <form:textarea placeholder ="Notes" path="notes" required="true"></form:textarea><br/>
+    <button type="reset">Clear</button>
+    <button type="submit">Submit</button>
+
 </form:form>
 </body>
 </html>
