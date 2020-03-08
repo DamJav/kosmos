@@ -17,6 +17,10 @@
     <form:input type="number" path="seatsCount" placeholder="Seats Count"/> <br/>
     <form:label path="ticketPrice">Ticket Price</form:label>
     <form:input type="number" path="ticketPrice" placeholder="Ticket Price"/> <br/>
+    <form:input type="date" path="arrivalDate"/>
+    <form:input type="date" path="departureDate"/>
+
+
     <button type="reset">Clear</button>
     <button type="submit">Submit</button>
 
