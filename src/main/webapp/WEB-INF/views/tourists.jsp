@@ -14,9 +14,9 @@
 <body>
 <jsp:include page="header.jsp"/>
 <button><a href="/tourists/add">Dodaj turyste</a></button>
-<for:forEach items="${flights}" var="flight" varStatus="i">
-    ${flight.name}
-    <a href="/flights/delete?id=${flight.id}">Usuń</a>
+<for:forEach items="${tourists}" var="tourist" varStatus="i">
+    ${tourist.name}
+    <a href="/tourists/delete?id=${tourist.id}">Usuń</a>
 </for:forEach>
 
 <jsp:include page="footer.jsp"/>
