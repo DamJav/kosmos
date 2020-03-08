@@ -25,4 +25,9 @@ public class DefaultTouristService implements TouristService {
     public void addTourist(Tourist tourist) {
         touristRepository.save(tourist);
     }
+
+    @Override
+    public void deleteTourist(Long id) {
+        touristRepository.deleteById(id);
+    }
 }

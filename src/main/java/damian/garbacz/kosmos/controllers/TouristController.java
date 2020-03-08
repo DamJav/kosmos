@@ -36,4 +36,10 @@ public class TouristController {
         touristService.addTourist(tourist);
         return "redirect:/tourists/showAll";
     }
+
+    @GetMapping("/delete")
+    public String deleteTourist(Long id){
+        touristService.deleteTourist(id);
+        return "redirect:/tourists/showAll";
+    }
 }

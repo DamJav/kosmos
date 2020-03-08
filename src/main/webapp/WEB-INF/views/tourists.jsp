@@ -16,6 +16,7 @@
 <button><a href="/tourists/add">Dodaj turyste</a></button>
 <for:forEach items="${tourists}" var="tourist" varStatus="i">
     ${tourist.name}
+    <a href="/toursts/delete?id=${tourist.id}">Usuń</a>
 </for:forEach>
 
 <jsp:include page="footer.jsp"/>
