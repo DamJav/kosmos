@@ -14,7 +14,20 @@
 <body>
 <form:form modelAttribute="tourist">
     <form:label path="name" >Name</form:label>
-    <form:input path="name" placeholder="Name"/>
+    <form:input path="name" placeholder="Name"/> <br/>
+    <form:label path="surName" >Surame</form:label>
+    <form:input path="surName" placeholder="Surname"/><br/>
+    <form:label path="country" >Surame</form:label>
+    <form:input path="country" placeholder="Your Country"/><br/>
+    <form:label path="sex" >Sex</form:label>
+    Male
+    <form:radiobutton path="sex" itemValue="Male"/>
+    Female
+    <form:radiobutton path="sex" itemValue="Female"/><br/>
+    <form:label path="dateOfBirth">Date of birth</form:label>
+    <form:input path="dateOfBirth" placeholder="YYYY-MM-DD"/><br/>
+    <form:label path="notes">Notes</form:label>
+    <form:textarea placeholder ="Notes" path="notes" required="true"></form:textarea>
 </form:form>
 </body>
 </html>
