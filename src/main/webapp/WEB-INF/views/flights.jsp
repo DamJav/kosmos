@@ -1,3 +1,4 @@
+<%@ taglib prefix="for" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Damian
@@ -12,7 +13,11 @@
 </head>
 <body>
 <jsp:include page="header.jsp"/>
-loty
+<button><a href="/flights/add">Dodaj lot</a></button>
+<for:forEach items="${tourists}" var="tourist" varStatus="i">
+    ${tourist.name}
+    <a href="/tourists/delete?id=${tourist.id}">Usuń</a>
+</for:forEach>
 
 <jsp:include page="footer.jsp"/>
 </body>
