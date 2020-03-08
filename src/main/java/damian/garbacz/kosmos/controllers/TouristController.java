@@ -1,6 +1,7 @@
 package damian.garbacz.kosmos.controllers;
 
 
+import damian.garbacz.kosmos.entities.Tourist;
 import damian.garbacz.kosmos.services.TouristService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,7 +25,8 @@ public class TouristController {
     }
 
     @GetMapping("/add")
-    public String addTourist(){
+    public String addTourist(Model model){
+        model.addAttribute("tourist", new Tourist());
         return "add-tourist";
     }
 }

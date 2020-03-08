@@ -13,7 +13,7 @@
 </head>
 <body>
 <jsp:include page="header.jsp"/>
-<button><a href="/#">Dodaj turyste</a></button>
+<button><a href="/tourists/add">Dodaj turyste</a></button>
 <for:forEach items="${tourists}" var="tourist" varStatus="i">
     ${tourist.name}
 </for:forEach>
