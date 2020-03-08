@@ -37,10 +37,10 @@ public class FlightController {
         flightService.addFlight(flight);
         return "redirect:/flights/showAll";
     }
-//
-//    @GetMapping("/delete")
-//    public String deleteTourist(Long id){
-//        touristService.deleteTourist(id);
-//        return "redirect:/tourists/showAll";
-//    }
+
+    @GetMapping("/delete")
+    public String deleteFlight(Long id){
+        flightService.deleteFlight(id);
+        return "redirect:/flights/showAll";
+    }
 }

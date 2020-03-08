@@ -26,4 +26,9 @@ public class DefaultFlightService implements FlightService {
     public void addFlight(Flight flight) {
         flightRepository.save(flight);
     }
+
+    @Override
+    public void deleteFlight(Long id) {
+        flightRepository.deleteById(id);
+    }
 }

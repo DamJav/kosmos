@@ -9,4 +9,5 @@ public interface FlightService {
 
     List<Flight> findAllFlights();
     void addFlight(Flight flight);
+    void deleteFlight(Long id);
 }
