@@ -20,6 +20,5 @@
     <a href="/flights/delete?id=${flight.id}">Usuń</a>
 </for:forEach>
 
-<jsp:include page="footer.jsp"/>
 </body>
 </html>

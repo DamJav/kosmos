@@ -13,9 +13,7 @@
 </head>
 <body>
 <jsp:include page="header.jsp"/>
-strona
 <button class="block"><a href="/tourists/showAll"><h2>Turyści</h2></a></button>
 <button class="block"><a href="/flights/showAll"><h2>Loty</h2></a></button>
-<jsp:include page="footer.jsp"/>
 </body>
 </html>

@@ -20,6 +20,5 @@
     <a href="/tourists/edit?id=${tourist.id}">Edytuj</a>
 </for:forEach>
 
-<jsp:include page="footer.jsp"/>
 </body>
 </html>
