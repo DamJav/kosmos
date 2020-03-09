@@ -12,6 +12,6 @@
 </head>
 <body>
 <header><h1>Cosmos</h1>
-<img src="/resources/banner.jpg"</header>
+</header>
 </body>
 </html>
