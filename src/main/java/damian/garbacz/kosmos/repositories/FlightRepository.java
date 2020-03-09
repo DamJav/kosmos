@@ -6,12 +6,13 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import java.time.LocalDate;
 import java.util.List;
 
 public interface FlightRepository extends JpaRepository<Flight, Long> {
 
-//    @Query("")
-//    List<Flight> findAllFlightsIdForTouristId(Long id);
-
     Flight findFlightById(Long flightId);
+
+    List<Flight> findAllByArrivalDateAndAndTicketPriceIsBefore(LocalDate date, Integer cost);
+
 }

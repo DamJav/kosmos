@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.time.LocalDate;
+
 @Controller
 @RequestMapping("/flights")
 public class FlightController {
@@ -47,6 +49,12 @@ public class FlightController {
     @GetMapping("/bookForm")
     public String bookFormPage(Model model){
         model.addAttribute("flights", flightService.findAllFlights());
+        return "book-flight";
+    }
+
+    @PostMapping("/bookForm")
+    public String bookFlightResult(LocalDate arrivalDate, Integer ticketCost, Model model){
+        model.addAttribute("flightsToBook",flightService.findBookFlights(arrivalDate, ticketCost));
         return "book-flight";
     }
 }

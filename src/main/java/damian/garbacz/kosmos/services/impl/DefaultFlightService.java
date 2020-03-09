@@ -5,6 +5,7 @@ import damian.garbacz.kosmos.repositories.FlightRepository;
 import damian.garbacz.kosmos.services.FlightService;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 
@@ -30,5 +31,10 @@ public class DefaultFlightService implements FlightService {
     @Override
     public void deleteFlight(Long id) {
         flightRepository.deleteById(id);
+    }
+
+    @Override
+    public List<Flight> findBookFlights(LocalDate date, Integer cost) {
+        return flightRepository.findAllByArrivalDateAndAndTicketPriceIsBefore(date, cost);
     }
 }

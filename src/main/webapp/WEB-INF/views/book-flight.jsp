@@ -12,7 +12,7 @@
 </head>
 <body>
 <jsp:include page="header.jsp"/>
-<h2 id="title">Adding tourist</h2>
+<h2 id="title">Flight booking</h2>
 <div class="form">
     <form>
         <label>Arrival date </label>
