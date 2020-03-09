@@ -18,7 +18,7 @@
     <form:input path="name" placeholder="Name"/> <br/>
     <form:label path="surName" >Surame</form:label>
     <form:input path="surName" placeholder="Surname"/><br/>
-    <form:label path="country" >Surame</form:label>
+    <form:label path="country" >Country</form:label>
     <form:input path="country" placeholder="Your Country"/><br/>
     <form:label path="sex" >Sex</form:label>
     <form:radiobutton value="Male" path="sex"/>
@@ -26,7 +26,7 @@
     <form:radiobutton value="Female" path="sex"/>
     Female<br/>
     <form:label path="dateOfBirth">Date of birth</form:label>
-    <form:input type="date" path="dateOfBirth"/>
+    <form:input type="date" path="dateOfBirth"/><br/>
     <form:label path="notes">Notes</form:label>
     <form:textarea placeholder ="Notes" path="notes" ></form:textarea><br/>
     <button type="reset">Clear</button>

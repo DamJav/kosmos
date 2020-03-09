@@ -24,3 +24,6 @@ html {
     -o-background-size: cover;
     background-size: cover;
 }
+td{
+    color:white;
+}

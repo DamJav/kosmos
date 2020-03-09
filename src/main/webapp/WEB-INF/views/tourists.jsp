@@ -13,12 +13,21 @@
 </head>
 <body>
 <jsp:include page="header.jsp"/>
-<button><a href="/tourists/add">Dodaj turyste</a></button>
+
+<button class="block"><a href="/tourists/add"><h2>Add tourist</h2></a></button>
+<h2>Tourist list</h2>
+<table>
 <for:forEach items="${tourists}" var="tourist" varStatus="i">
     ${tourist.name}
-    <a href="/tourists/delete?id=${tourist.id}">Usuń</a>
-    <a href="/tourists/edit?id=${tourist.id}">Edytuj</a>
+    <tr>
+        <td>${tourist.name}</td>
+        <td>${tourist.surName}</td>
+        <td>${tourist.country}</td>
+        <td>${tourist.dateOfBirth}</td>
+        <td><a href="/tourists/delete?id=${tourist.id}">Usuń</a></td>
+        <td><a href="/tourists/edit?id=${tourist.id}">Edytuj</a></td>
+    </tr>
 </for:forEach>
-
+</table>
 </body>
 </html>

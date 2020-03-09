@@ -13,7 +13,7 @@
 </head>
 <body>
 <jsp:include page="header.jsp"/>
-<button class="block"><a href="/tourists/showAll"><h2>Turyści</h2></a></button>
-<button class="block"><a href="/flights/showAll"><h2>Loty</h2></a></button>
+<button class="block"><a href="/tourists/showAll"><h2>Tourists</h2></a></button>
+<button class="block"><a href="/flights/showAll"><h2>Flights</h2></a></button>
 </body>
 </html>
