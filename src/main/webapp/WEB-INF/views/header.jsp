@@ -11,6 +11,7 @@
 
 </head>
 <body>
-<header>Kosmos</header>
+<header><h1>Cosmos</h1>
+<img src="/resources/banner.jpg"</header>
 </body>
 </html>

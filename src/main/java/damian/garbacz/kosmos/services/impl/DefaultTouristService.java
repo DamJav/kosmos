@@ -13,9 +13,11 @@ import java.util.List;
 public class DefaultTouristService implements TouristService {
 
     private final TouristRepository touristRepository;
+    private final FlightRepository flightRepository;
 
-    public DefaultTouristService(TouristRepository touristRepository) {
+    public DefaultTouristService(TouristRepository touristRepository, FlightRepository flightRepository) {
         this.touristRepository = touristRepository;
+        this.flightRepository = flightRepository;
     }
 
     @Override
@@ -35,6 +37,6 @@ public class DefaultTouristService implements TouristService {
 
     @Override
     public List<Flight> findFlightsByTouristId(Long id) {
-        return touristRepository.findAllFlightsIdForTouristId(id);
+        return flightRepository.findAllFlightsIdForTouristId(id);
     }
 }
