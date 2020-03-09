@@ -9,16 +9,30 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Flights</title>
 </head>
 <body>
 <jsp:include page="header.jsp"/>
-<button><a href="/flights/add">Dodaj lot</a></button>
-<for:forEach items="${flights}" var="flight" varStatus="i">
-    ${flight.id}
-    ${flight.seatsCount}
-    <a href="/flights/delete?id=${flight.id}">Usuń</a>
-</for:forEach>
-
+<button class="block"><a href="/flights/add"><h2>Add flight</h2></a></button>
+<h1 id="title">Flights list</h1>
+<table>
+    <tr>
+        <td>Arrival date</td>
+        <td>Departure date</td>
+        <td>Seats count</td>
+        <td>Ticket price</td>
+        <td>Actions</td>
+    </tr>
+    <for:forEach items="${flights}" var="flight" varStatus="i">
+        <tr>
+            <td>${flight.arrivalDate}</td>
+            <td>${flight.departureDate}</td>
+            <td>${flight.seatsCount}</td>
+            <td>${flight.ticketPrice}</td>
+            <td><a href="/flights/delete?id=${flight.id}">Delete</a></td>
+            <td><a href="/flights/edit?id=${flight.id}">Edit</a></td>
+        </tr>
+    </for:forEach>
+</table>
 </body>
 </html>
