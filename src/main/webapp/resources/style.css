@@ -48,3 +48,7 @@ td{
     font-size: 20px;
     text-align: center;
 }
+
+input{
+    margin-bottom:8px;
+}

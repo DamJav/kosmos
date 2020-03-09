@@ -22,7 +22,7 @@
     <form:input type="number" path="ticketPrice" placeholder="Ticket Price"/> <br/>
     <form:label path="arrivalDate">Arrival date</form:label>
     <form:input type="date" path="arrivalDate"/><br/>
-    <form:label path="dapartureDate">Departure date</form:label>
+    <form:label path="departureDate">Departure date</form:label>
     <form:input type="date" path="departureDate"/><br/>
     <button type="reset">Clear</button>
     <button type="submit">Submit</button>
