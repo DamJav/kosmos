@@ -8,14 +8,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Kosmos</title>
-    <link rel="stylesheet" href="/resources/style.css">
+    <title>Cosmos</title>
+
 </head>
 <body>
 <jsp:include page="header.jsp"/>
 strona
-<button class="block"><a href="/tourists/showAll">Turyści</a></button>
-<button><a href="/flights/showAll">Loty</a></button>
+<button class="block"><a href="/tourists/showAll"><h2>Turyści</h2></a></button>
+<button class="block"><a href="/flights/showAll"><h2>Loty</h2></a></button>
 <jsp:include page="footer.jsp"/>
 </body>
 </html>
