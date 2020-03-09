@@ -4,6 +4,12 @@ h1{
     color:white;
 }
 
+#title{
+    text-align: center;
+    font-size: 45px;
+    color:white;
+}
+
 .block {
     display: block;
     width: 70%;
@@ -23,7 +29,22 @@ html {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    color:white;
+}
+table{
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
 }
 td{
     color:white;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 30px;
+}
+.form{
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 20px;
+    text-align: center;
 }

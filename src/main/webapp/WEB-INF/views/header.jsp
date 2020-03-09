@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/resources/style.css">
 </head>
 <body>
-<header><h1>Cosmos</h1>
+<header><a href="/"><h1>Cosmos</h1></a>
 </header>
 </body>
 </html>

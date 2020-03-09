@@ -9,23 +9,30 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Tourists</title>
 </head>
 <body>
 <jsp:include page="header.jsp"/>
 
 <button class="block"><a href="/tourists/add"><h2>Add tourist</h2></a></button>
-<h2>Tourist list</h2>
+<h1 id="title">Tourist list</h1>
 <table>
+    <tr>
+        <td>Name</td>
+        <td>Surname</td>
+        <td>Country</td>
+        <td>Date of Birth</td>
+        <td>Actions
+        </td>
+    </tr>
 <for:forEach items="${tourists}" var="tourist" varStatus="i">
-    ${tourist.name}
     <tr>
         <td>${tourist.name}</td>
         <td>${tourist.surName}</td>
         <td>${tourist.country}</td>
         <td>${tourist.dateOfBirth}</td>
-        <td><a href="/tourists/delete?id=${tourist.id}">Usuń</a></td>
-        <td><a href="/tourists/edit?id=${tourist.id}">Edytuj</a></td>
+        <td><a href="/tourists/delete?id=${tourist.id}">Delete</a></td>
+        <td><a href="/tourists/edit?id=${tourist.id}">Edit</a></td>
     </tr>
 </for:forEach>
 </table>

@@ -13,6 +13,9 @@
     <title>Add tourist</title>
 </head>
 <body>
+<jsp:include page="header.jsp"/>
+<h2 id="title">Adding tourist</h2>
+<div class="form">
 <form:form modelAttribute="tourist">
     <form:label path="name" >Name</form:label>
     <form:input path="name" placeholder="Name"/> <br/>
@@ -29,9 +32,9 @@
     <form:input type="date" path="dateOfBirth"/><br/>
     <form:label path="notes">Notes</form:label>
     <form:textarea placeholder ="Notes" path="notes" ></form:textarea><br/>
-    <button type="reset">Clear</button>
-    <button type="submit">Submit</button>
-
+    <button type="reset" class="formButton">Clear</button>
+    <button type="submit" class="formButton">Submit</button>
 </form:form>
+</div>
 </body>
 </html>
