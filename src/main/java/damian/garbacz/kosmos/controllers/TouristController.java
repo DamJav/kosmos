@@ -2,6 +2,7 @@ package damian.garbacz.kosmos.controllers;
 
 
 import damian.garbacz.kosmos.entities.Tourist;
+import damian.garbacz.kosmos.services.FlightService;
 import damian.garbacz.kosmos.services.TouristService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,9 +15,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class TouristController {
 
     private final TouristService touristService;
+    private final FlightService flightService;
 
-    public TouristController(TouristService touristService) {
+    public TouristController(TouristService touristService, FlightService flightService) {
         this.touristService = touristService;
+        this.flightService = flightService;
     }
 
     @GetMapping("/showAll")
@@ -45,7 +48,15 @@ public class TouristController {
 
     @GetMapping("/edit")
     public String editTourist(Long id, Model model){
-        model.addAttribute("touristFlights", touristService.findFlightsByTouristId(id));
+        model.addAttribute("allFlights", flightService.findAllFlights());
+        model.addAttribute("touristId", id);
         return "tourist-flights";
     }
+    @GetMapping("/addToTourist")
+    public String addFlightToTourist(Long flightId, Long touristId, Model model){
+            touristService.addFlightToTourist(flightId, touristId);
+        model.addAttribute("touristId", touristId);
+        return "tourist-flights";
+    }
+
 }

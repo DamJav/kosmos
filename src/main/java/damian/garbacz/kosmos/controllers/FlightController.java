@@ -43,4 +43,10 @@ public class FlightController {
         flightService.deleteFlight(id);
         return "redirect:/flights/showAll";
     }
+
+    @GetMapping("/bookForm")
+    public String bookFormPage(Model model){
+        model.addAttribute("flights", flightService.findAllFlights());
+        return "book-flight";
+    }
 }

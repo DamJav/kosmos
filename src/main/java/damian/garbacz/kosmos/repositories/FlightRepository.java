@@ -10,6 +10,8 @@ import java.util.List;
 
 public interface FlightRepository extends JpaRepository<Flight, Long> {
 
-    @Query("select f from Flight f where f.tourists=?1")
-    List<Flight> findAllFlightsIdForTouristId(Long id);
+//    @Query("")
+//    List<Flight> findAllFlightsIdForTouristId(Long id);
+
+    Flight findFlightById(Long flightId);
 }

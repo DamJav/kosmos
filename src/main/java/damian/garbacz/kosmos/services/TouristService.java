@@ -11,4 +11,5 @@ public interface TouristService {
     void addTourist(Tourist tourist);
     void deleteTourist(Long id);
     List<Flight> findFlightsByTouristId(Long id);
+    void addFlightToTourist(Long flightId, Long touristId);
 }

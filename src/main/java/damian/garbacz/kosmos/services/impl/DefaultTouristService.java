@@ -37,6 +37,13 @@ public class DefaultTouristService implements TouristService {
 
     @Override
     public List<Flight> findFlightsByTouristId(Long id) {
-        return flightRepository.findAllFlightsIdForTouristId(id);
+        return null;
+    }
+
+    @Override
+    public void addFlightToTourist(Long flightId, Long touristId) {
+        Tourist tourist = touristRepository.findTouristById(touristId);
+        Flight flight = flightRepository.findFlightById(flightId);
+
     }
 }

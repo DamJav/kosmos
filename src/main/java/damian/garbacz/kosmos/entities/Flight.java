@@ -25,8 +25,9 @@ public class Flight {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate departureDate;
     private Integer seatsCount;
-    @ManyToMany
+    @ManyToMany(mappedBy = "flights")
     private List<Tourist> tourists;
     private Integer ticketPrice;
+
 
 }
