@@ -13,6 +13,7 @@ public interface FlightRepository extends JpaRepository<Flight, Long> {
 
     Flight findFlightById(Long flightId);
 
-    List<Flight> findAllByArrivalDateAndAndTicketPriceIsBefore(LocalDate date, Integer cost);
+    @Query(value = "select * from flights where arrival_date = ?1 AND ticket_price<=?2", nativeQuery = true)
+    List<Flight> findAllByArrivalDateAndAndTicketPriceIsBefore(LocalDate ArrivalDate, Integer TicketPrice);
 
 }

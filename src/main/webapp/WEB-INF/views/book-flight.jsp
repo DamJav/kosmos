@@ -14,13 +14,13 @@
 <jsp:include page="header.jsp"/>
 <h2 id="title">Flight booking</h2>
 <div class="form">
-    <form>
+    <form method="post">
         <label>Arrival date </label>
         <input type="date" name="arrivalDate"><br/>
         <label>Max ticket cost</label>
         <input type="number" name="ticketCost"><br/>
         <button type="reset">Clear</button>
-        <button type="submit">Find</button>
+        <input type="submit" value="Find">
     </form>
 </div>
 </body>

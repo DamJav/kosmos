@@ -12,14 +12,25 @@
     <title>Flights to book</title>
 </head>
 <body>
-<for:forEach items="${flightsToBook}" var="flight" varStatus="i">
+<jsp:include page="header.jsp"/>
+<h1 id="title">Flights list</h1>
+<table>
     <tr>
-        <td>${flight.arrivalDate}</td>
-        <td>${flight.departureDate}</td>
-        <td>${flight.seatsCount}</td>
-        <td>${flight.ticketPrice}</td>
-        <td><a href="/#">Book</a></td>
+        <td>Arrival date</td>
+        <td>Departure date</td>
+        <td>Seats count</td>
+        <td>Ticket price</td>
+        <td>Actions</td>
     </tr>
-</for:forEach>
+    <for:forEach items="${flightsToBook}" var="flight" varStatus="i">
+        <tr>
+            <td>${flight.arrivalDate}</td>
+            <td>${flight.departureDate}</td>
+            <td>${flight.seatsCount}</td>
+            <td>${flight.ticketPrice}</td>
+            <td><a href="#">Book</a></td>
+        </tr>
+    </for:forEach>
+</table>
 </body>
 </html>

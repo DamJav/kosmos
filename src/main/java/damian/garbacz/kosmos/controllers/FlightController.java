@@ -55,6 +55,6 @@ public class FlightController {
     @PostMapping("/bookForm")
     public String bookFlightResult(LocalDate arrivalDate, Integer ticketCost, Model model){
         model.addAttribute("flightsToBook",flightService.findBookFlights(arrivalDate, ticketCost));
-        return "book-flight";
+        return "book-flight-result";
     }
 }
